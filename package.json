@@ -8,5 +8,8 @@
     "start": "electron ."
   },
   "author": "fdisla",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^23.0.0"
+  }
 }

@@ -8,12 +8,16 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    "fullscreen": true
+    fullscreen: true,
   });
   win.removeMenu();
-  
+  const ses = win.webContents.session;
+
+  ses.clearCache(() => {
+    alert("Cache cleared!");
+  });
   // Load a remote URL
-  win.loadURL("http://localhost:3000");
+  win.loadURL("http://juegos.trunmore.com:8080/");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
